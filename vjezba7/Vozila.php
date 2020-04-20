@@ -1,22 +1,16 @@
 <?php
 
-class Vozila
-{
+class Vozila {
 
-	private $kotaci;
-	private $maxBrzina;
-	private $brojBrzina;
-	private $marka;
-	private $cijena;
-	private $datumObjave;
-	private $datumZatvaranja;
+	public $kotaci;
+	public $maxBrzina;
+	public $brojBrzina;
+	public $marka;
+	public $cijena;
+	protected $datumObjave;
+	protected $datumZatvaranja;
 
-	public function objaviOglas($maxBrzinam, $brojBrzina, $marka, $cijena, $datum){
-
-		$this->maxBrzina = $maxBrzinam;
-		$this->brojBrzina = $brojBrzina;
-		$this->marka = $marka;
-		$this->cijena = $cijena;
+	public function objaviOglas($datum){
 
 		if( strtotime($datum) >=  strtotime( date('d.m.Y.') ) ){
 			$this->datumObjave = $datum;
@@ -24,6 +18,7 @@ class Vozila
 			$this->datumObjave = date('d.m.Y.');
 		}
 	}
+
 
 	public function zatvoriOglas($datum){
 		if( strtotime($datum) >=  strtotime( $this->datumObjave ) ){

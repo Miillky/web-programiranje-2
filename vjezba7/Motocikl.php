@@ -4,7 +4,7 @@ class Motocikl extends Vozila {
 
 	private $kolometara;
 
-	public function objaviOglas($kolometara, $kotaci, $velicinaKotaca, $maxBrzinam, $brojBrzina, $marka, $cijena, $datumObjave, $datumZatvaranja ){
+	public function objaviOglas($kolometara, $kotaci, $maxBrzinam, $brojBrzina, $marka, $cijena, $datumObjave, $datumZatvaranja ){
 
 		$this->kolometara = $kolometara;
 		$this->kotaci = $kotaci;

@@ -24,3 +24,11 @@ echo $arrayHandle->row(4);
 echo '<pre>';
     print_r($arrayHandle->reorderArray());
 echo '</pre>';
+
+$korisnik =  ["ime"=>"Marko", "prezime"=>"Marković"];
+$sql = new SQLCommands($korisnik, 'korisnik');
+
+echo '<pre>';
+    print_r($sql->insert());
+    print_r($sql->update());
+echo '</pre>';
